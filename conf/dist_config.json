@@ -1,0 +1,15 @@
+{
+  "epoch": 1000,
+  "batch_size": 50,
+  "shuffle_num": 10,
+  "test_file": "./data/train0",
+  "train_file": "./data/test0",
+  "optimizer": {
+    "name": "DistSGD",
+    "learning_rate": 0.5,
+    "dim": 3,
+    "eps": 1e-7,
+    "sync_mode": 1
+  },
+  "loss_func_name": "sigmoid_cross_entroy_with_logits"
+}

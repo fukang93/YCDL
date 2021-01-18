@@ -1,0 +1,30 @@
+{
+  "optimizer": {
+    "name": "Adagrad",
+    "learning_rate": 0.1,
+    "eps": 1e-7
+  },
+  "global": {
+    "epoch": 100,
+    "batch_size": 50,
+    "shuffle_num": 10,
+    "test_file": "./data/uci_data/bank/test",
+    "train_file": "./data/uci_data/bank/train"
+  },
+  "layers": [
+    {
+      "name": "Dense",
+      "input1": "input",
+      "input2": "weight1",
+      "output": {
+        "name": "out1"
+      }
+    },
+    {
+      "name": "Loss",
+      "input": "out11",
+      "label": "label",
+      "loss": "mse"
+    }
+  ]
+}
